@@ -6,5 +6,15 @@ const AuthorsSchema = new mongoose.Schema( {
         type: String,
         require:true
     },
-    
-})
+    age: {
+        type: String,
+    },
+    email: {
+        type: String,
+        require: true
+    },
+    birthDate: String,
+    desctiption: String,
+});
+
+module.exports = mongoose.model("Authors", AuthorsSchema);

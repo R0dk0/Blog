@@ -1,16 +1,25 @@
 "use strict"
 
 const express = require('express');
-const mongoose = require('mongoose');
+const mongo = require('mongoose');
 
 const Authors = require('./models/author');
 const Posts = require('./models/post');
+const bodyParser = require('body-parser');
+
+const { createPost } = require('./controller/post')
+
+mongo.connect('mongodb://212.39.67.141:80/blog')
 
 const app = express();
 
+app.use(bodyParser.json());
 
 
-
+app.get("/", (req,res) => {
+    res.status(200).send('Hello Blogger')
+})
+app.post('/post/create', createPost);
 
 app.listen(3000, () => {
 
