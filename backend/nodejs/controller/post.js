@@ -5,6 +5,7 @@ const Post  = require ('../models/post');
 const createPost = async ( req, res ) => {
 
     const post = new Post ({
+        postId: req.body.postId,
         title: req.body.title,
         text: req.body.text,
         author: req.body.author

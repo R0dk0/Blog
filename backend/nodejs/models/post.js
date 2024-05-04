@@ -3,7 +3,7 @@
 const mongoose = require('mongoose');
 
 const PostSchema = new mongoose.Schema({
-    orderID: {
+    postId: {
         type: Number,
         required: true,
         unique: true,
