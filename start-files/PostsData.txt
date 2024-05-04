@@ -1,0 +1,42 @@
+[
+    {
+        "_id": "66362d229d3e4df4b0918179",
+        "postId": 1,
+        "title": "Stargate",
+        "text": "Portal to universe",
+	"category": "Mystery",
+        "author": "Rodko",
+        "PostDate": "2024-05-04T12:42:10.331Z",
+        "__v": 0
+    },
+    {
+        "_id": "66362d3c9d3e4df4b091817b",
+        "postId": 2,
+        "title": "The x Filles",
+        "text": "The truth is out there",
+	"category": "Mystery",
+        "author": "Rodko",
+        "PostDate": "2024-05-04T12:42:36.435Z",
+        "__v": 0
+    },
+    {
+        "_id": "66362d5a9d3e4df4b091817d",
+        "postId": 3,
+        "title": "The Last Emperator",
+        "text": "I am your Father my Son",
+	"category": "Mystery",
+        "author": "Rodko",
+        "PostDate": "2024-05-04T12:43:06.272Z",
+        "__v": 0
+    },
+    {
+        "_id": "66362d729d3e4df4b091817f",
+        "postId": 4,
+        "title": "The Chose One",
+        "text": "Martonatora",
+	"category": "Mystery",
+        "author": "Rodko",
+        "PostDate": "2024-05-04T12:43:30.644Z",
+        "__v": 0
+    }
+]

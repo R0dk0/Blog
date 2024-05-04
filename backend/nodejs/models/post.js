@@ -16,6 +16,10 @@ const PostSchema = new mongoose.Schema({
         type: String,
         required:true
     },
+    category: {
+        type: String,
+        required:true
+    },
     author:{
         type:String,
         required:true
