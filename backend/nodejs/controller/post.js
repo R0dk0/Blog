@@ -10,7 +10,7 @@ const createPost = async ( req, res ) => {
         text: req.body.text,
         category: req.body.category,
         author: req.body.author
-    });
+    })
     try {
         const newPost = await post.save();
         res.status(201).json(newPost)

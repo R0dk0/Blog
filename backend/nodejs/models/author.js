@@ -2,9 +2,13 @@ const mongoose = require('mongoose');
 
 const AuthorsSchema = new mongoose.Schema( {
 
+    authorId: {
+        type: String,
+        require: true
+    },
     name: {
         type: String,
-        require:true
+        require: true
     },
     age: {
         type: String,
@@ -13,8 +17,14 @@ const AuthorsSchema = new mongoose.Schema( {
         type: String,
         require: true
     },
-    birthDate: String,
-    desctiption: String,
+    birthDate: {
+        type: String,
+        require: true
+    },
+    description: {
+        type: String,
+        require: true
+    },
 });
 
 module.exports = mongoose.model("Authors", AuthorsSchema);

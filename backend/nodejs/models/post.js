@@ -20,14 +20,19 @@ const PostSchema = new mongoose.Schema({
         type: String,
         required:true
     },
-    author:{
-        type:String,
+    author: {
+        type: String,
         required:true
     },
-    PostDate:{
-        type: Date,
-        default: Date.now,
-        required:true
+    PostDate: {
+        type: String,
+
+        // default: Date.now,
+        default:  () => {
+            const date = new Date()
+            const formatDate = date.toString().slice(0,24);
+            return formatDate;
+        },
     }
 });
 
