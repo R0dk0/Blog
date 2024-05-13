@@ -30,7 +30,43 @@ const createAuthor = async (req,res) => {
     }
 };
 
+const getAuthorByAge = async (req,res) =>{
+
+    Author.find({age: req.query.age}) //#gt, gte, lt , lte {req.query.age} - в сайта на монгоосе документацията кое какво е 
+        .then((author) => {
+            res.json(author)
+        })
+        .catch((err) => {
+            res.status(400).json({message: err.message})
+        })
+};
+
+const getAuthorByName = async (req, res) => {
+
+    Author.findOne({name: req.query.name})
+        .then((author) =>{
+            res.json(author)
+        })
+        .catch((err) => {
+            res.status(400).json({message: err.message})
+        })
+};
+
+const getAuthorByEmail = async (req, res) => {
+
+    Author.findOne({email: req.query.email})
+        .then((author) => {
+            res.json(author)
+        })
+        .catch((err) => {
+            res.status(400).json({message: err.message})
+        })
+};
+
 module.exports = {
     getAllAuthors,
     createAuthor,
+    getAuthorByAge,
+    getAuthorByName,
+    getAuthorByEmail,
 }

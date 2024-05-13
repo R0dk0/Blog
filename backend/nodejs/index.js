@@ -8,7 +8,7 @@ const Posts = require('./models/post');
 const bodyParser = require('body-parser');
 
 const { createPost, getAllPost, getPostByCategory, getPostByAuthor, getByTitle } = require('./controller/post');
-const { getAllAuthors, createAuthor } = require('./controller/author');
+const { getAllAuthors, createAuthor, getAuthorByAge, getAuthorByName, getAuthorByEmail } = require('./controller/author');
 
 mongo.connect('mongodb://212.39.67.141:80/blog')
 
@@ -22,7 +22,9 @@ app.get('/', (req,res) => {
 });
 
 app.get('/authors/all', getAllAuthors);
-
+app.get('/author/age',getAuthorByAge);
+app.get('/author/name',getAuthorByName);
+app.get('/author/email',getAuthorByEmail)
 
 app.get('/posts/all', getAllPost);
 app.get('/posts/byTitle',  getByTitle);
